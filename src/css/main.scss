@@ -1,6 +1,2 @@
 @use "./reset";
-@use "./variables/colors" as vars;
-
-body {
-  background: vars.$color-primary;
-}
+@use "layout/index";

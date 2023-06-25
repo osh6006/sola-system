@@ -1,4 +1,50 @@
-// Reset Box Model
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+code,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+div,
+span,
+article,
+section,
+header,
+footer,
+p,
+ul,
+li,
+fieldset,
+legend,
+label,
+a,
+nav {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
 html,
 body,
 div,
@@ -59,77 +105,49 @@ tfoot,
 thead,
 tr,
 th,
-td {
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
-
-// Reset Typography
-body {
-  line-height: 1;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
-
-// Reset List Styles
 ol,
 ul {
   list-style: none;
 }
-
-// Reset Links
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-// Reset Forms
-button,
-input,
-select,
-textarea {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  appearance: none;
-  background-color: transparent;
-  &::-webkit-input-placeholder {
-    color: inherit;
-    opacity: 0.5;
-  }
-  &::-moz-placeholder {
-    color: inherit;
-    opacity: 0.5;
-  }
-  &:-ms-input-placeholder {
-    color: inherit;
-    opacity: 0.5;
-  }
-  &::-ms-input-placeholder {
-    color: inherit;
-    opacity: 0.5;
-  }
-  &::placeholder {
-    color: inherit;
-    opacity: 0.5;
-  }
-}
-
-// Reset Button Styles
-button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-// Reset Images
-img {
-  max-width: 100%;
-  height: auto;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }

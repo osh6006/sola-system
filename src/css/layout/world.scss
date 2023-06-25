@@ -1,0 +1,56 @@
+body {
+  height: 500vw;
+  font-family: "Apple SD Gothic Neo", "Roboto", "Noto Sans KR", NanumGothic,
+    "Malgun Gothic", sans-serif;
+  -webkit-overflow-scrolling: touch;
+  color: #555;
+  //   background-image: url("/src/images/background.jpg");
+  //   background-position: 0 0;
+  //   background-size: contain;
+  background: #fff000;
+}
+
+.world {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+
+  .stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    transform-style: preserve-3d;
+    /* 줌 아웃 */
+    transform: translateZ(-490vw);
+
+    .planet {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.8);
+
+      .contents {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-size: 5rem;
+      }
+    }
+
+    .sun {
+      transform: translateZ(300vw);
+    }
+    .mercury {
+      transform: translateZ(-10vw);
+    }
+  }
+}

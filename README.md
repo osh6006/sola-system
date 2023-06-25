@@ -11,7 +11,7 @@
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/osh6006/sola-system?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/osh6006/sola-system?color=ffffff">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/osh6006/sola-system?color=56BEB8">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/osh6006/sola-system?color=56BEB8">
 
@@ -46,7 +46,7 @@
 
 ## :dart: About
 
-Describe your project
+태양계를 탐험하세요
 
 ## :sparkles: Features
 
@@ -72,25 +72,25 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/osh6006 /sola-system
+$ git clone https://github.com/osh6006/sola-system
 
 # Access
 $ cd sola-system
 
 # Install dependencies
-$ yarn
+$ npm i
 
 # Run the project
-$ yarn start
+$ npm run start
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:1234>
 ```
 
 ## :memo: License
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
-Made with :heart: by <a href="https://github.com/osh6006 " target="_blank">ohs6006</a>
+Made with :heart: by <a href="https://github.com/osh6006 " target="_blank">osh6006</a>
 
 &#xa0;
 
