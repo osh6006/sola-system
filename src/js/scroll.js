@@ -24,8 +24,17 @@ import { Planet } from "./planet";
     // const scrollPer = window.scrollY / maxScrollValue;
     // progressEl.style.width = `${scrollPer * 100}%`;
 
-    console.log(zMove);
     // 행성 애니메이션
+    console.log(zMove);
+    if (zMove > -390 && sun.flag) {
+      sun.makeAnime();
+      sun.setFlag();
+    }
+
+    if (zMove > -76 && mercury.flag) {
+      mercury.makeAnime();
+      mercury.setFlag();
+    }
   });
 
   // function

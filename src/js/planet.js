@@ -5,14 +5,14 @@ export class Planet {
   leftEl;
   leftBottomEl;
   rightEl;
+  flag;
 
   constructor(name) {
     this.name = name;
     this.leftEl = document.querySelector(`.${name} .planet__desc-left`);
-    this.leftBottomEl = document.querySelector(
-      `.${name} .planet__desc-bottom-left`
-    );
+    this.leftBottomEl = document.querySelector(`.${name} .planet__desc-bottom-left`);
     this.rightEl = document.querySelector(`.${name} .planet__desc-right`);
+    this.flag = true;
   }
 
   makeAnime() {
@@ -40,5 +40,9 @@ export class Planet {
     this.leftEl.classList.add("hidden");
     this.leftBottomEl.classList.add("hidden");
     this.rightEl.classList.add("hidden");
+  }
+
+  setFlag() {
+    this.flag = !this.flag;
   }
 }
