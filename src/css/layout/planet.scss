@@ -20,32 +20,62 @@
 
 .sun {
   position: relative;
-  transform: translateZ(300vw);
+  transform: translateZ(400vw);
   @include getPlanetDesc("sun");
   @include planetization("sun");
 }
 .mercury {
-  transform: translateZ(100vw);
+  transform: translateZ(200vw);
   @include getPlanetDesc("mercury");
   @include planetization("mercury");
 }
 
 .venus {
-  transform: translateZ(-100vw);
+  transform: translateZ(-10vw);
   @include getPlanetDesc("venus");
   @include planetization("venus");
 }
 
 .earth {
-  transform: translateZ(-300vw);
+  transform: translateZ(-200vw);
   @include getPlanetDesc("earth");
   @include planetization("earth");
 }
 
 .mars {
-  transform: translateZ(-500vw);
+  transform: translateZ(-400vw);
   @include getPlanetDesc("mars");
   @include planetization("mars");
+}
+
+.jupiter {
+  transform: translateZ(-600vw);
+  @include getPlanetDesc("jupiter");
+  @include planetization("jupiter");
+}
+
+.saturn {
+  transform: translateZ(-800vw);
+  @include getPlanetDesc("saturn");
+  @include planetization("saturn");
+}
+
+.uranus {
+  transform: translateZ(-1000vw);
+  @include getPlanetDesc("uranus");
+  @include planetization("uranus");
+}
+
+.neptune {
+  transform: translateZ(-1200vw);
+  @include getPlanetDesc("neptune");
+  @include planetization("neptune");
+}
+
+.pluto {
+  transform: translateZ(-1400vw);
+  @include getPlanetDesc("pluto");
+  @include planetization("pluto");
 }
 
 .title {
