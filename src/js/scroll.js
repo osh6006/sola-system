@@ -1,5 +1,7 @@
 "use strict";
 
+import { Planet } from "./planet";
+
 {
   const stageEl = document.querySelector(".world .stage");
   const progressEl = document.querySelector(".progress-bar");
@@ -15,14 +17,22 @@
     const zMove = (window.scrollY / maxScrollValue) * 980 - 490;
     stageEl.style.transform = `translateZ(${zMove}vw)`;
 
-    console.log((window.scrollY / maxScrollValue) * 980 - 490);
-
     // // 프로그래스바
     // const scrollPer = window.scrollY / maxScrollValue;
     // progressEl.style.width = `${scrollPer * 100}%`;
+
+    // 행성 텍스트 애니메이션
   });
 
+  // function
   function resizeHandler() {
     maxScrollValue = document.body.offsetHeight - window.innerHeight;
   }
+
+  function init() {
+    new Planet("sun");
+  }
+
+  // init
+  init();
 }

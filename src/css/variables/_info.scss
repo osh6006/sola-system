@@ -1,0 +1,25 @@
+$planetTilts: (
+  sun: rotate(0deg),
+  mercury: rotate(0.034deg),
+  venus: rotate(177.3deg),
+  earth: rotate(23.26deg),
+  mars: rotate(25.2deg),
+  jupiter: rotate(3.1deg),
+  saturn: rotate(26.7deg),
+  uranus: rotate(97.8deg),
+  neptune: rotate(28.3deg),
+  pluto: rotate(122.5deg),
+);
+
+$planetDays: (
+  sun: 600,
+  mercury: 1407.6,
+  venus: 5832.5,
+  earth: 23.9,
+  mars: 24.6,
+  jupiter: 9.9,
+  saturn: 10.7,
+  uranus: 17.2,
+  neptune: 16.1,
+  pluto: 153.3,
+);

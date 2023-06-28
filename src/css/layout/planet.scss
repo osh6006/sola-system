@@ -1,0 +1,48 @@
+@use "../mixins/planet" as *;
+@use "../variables/info" as *;
+@use "../variables/colors" as *;
+@use "../mixins/size" as *;
+
+.planet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .planet__contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+.sun {
+  position: relative;
+  transform: translateZ(300vw);
+  @include getPlanetDesc("sun");
+  @include planetization("sun");
+}
+.mercury {
+  transform: translateZ(-10vw);
+  @include planetization("mercury");
+}
+
+.title {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  color: white;
+  font-size: 5rem;
+  transform: translateX(-50%);
+
+  @include breakpoint("lg") {
+    font-size: 6rem;
+    bottom: -20;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}

@@ -1,0 +1,201 @@
+@use "../mixins/animation" as *;
+@use "../variables/colors" as *;
+@use "../variables/urls" as *;
+@use "../variables/info" as *;
+@use "./size" as *;
+
+@mixin planetization($planet) {
+  $color: map-get($planetColors, $planet);
+  $imageUrl: map-get($planetImgUrls, $planet);
+  $tilt: map-get($planetTilts, $planet);
+  $days: map-get($planetDays, $planet);
+
+  .planet__atmosphere {
+    height: calc(100vw / 3);
+    width: calc(100vw / 3);
+    position: relative;
+    background: radial-gradient(
+      circle at 30% 50%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 65%
+    );
+    border-radius: calc(100vw / 3);
+    overflow: hidden;
+    box-shadow: inset 10px 0px 12px -2px rgba(255, 255, 255, 0.2),
+      inset -70px 0px 50px 0px black, -5px 0px 10px -4px $color;
+  }
+
+  .planet__surface {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-image: $imageUrl;
+    transform: $tilt scale(1.2);
+    animation: planetRotate calc($days * 0.1s) linear infinite;
+  }
+
+  .planet__contents {
+    &::before {
+      transform: $tilt scale(1.2);
+      border-color: $color;
+      color: $color;
+    }
+  }
+}
+
+@mixin getPlanetDesc($planet) {
+  $color: map-get($planetColors, $planet);
+
+  .planet__desc-left {
+    position: absolute;
+    top: -50;
+    left: -200;
+    color: white;
+    font-size: 3rem;
+    padding: 1.5rem;
+
+    .planet__desc-left-subtitle {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -12;
+        left: 0;
+        width: 20%;
+        height: 3px;
+        background-color: $color;
+      }
+    }
+
+    .planet__desc-left-con {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      padding: 1.5rem;
+      border: 2px solid white;
+      border-radius: 0.4em;
+      margin-top: 2rem;
+
+      .attributes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        h4 {
+          position: relative;
+          font-size: 2rem;
+
+          sub,
+          sup {
+            font-size: 1.5rem;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -12;
+            left: 50%;
+            width: 40px;
+            height: 3px;
+            background-color: $color;
+            transform: translateX(-50%);
+          }
+        }
+
+        p {
+          font-size: 1.66rem;
+          color: darken($color: white, $amount: 2);
+        }
+      }
+    }
+  }
+
+  // ---- bottom - left
+
+  .planet__desc-bottom-left {
+    position: absolute;
+    left: -200;
+    bottom: 40;
+    color: white;
+    font-size: 3rem;
+    padding: 1.5rem;
+
+    .container {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 1rem;
+      padding: 1.5rem;
+      border: 2px solid white;
+      border-radius: 0.4em;
+      margin-top: 2rem;
+
+      .element {
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        border-radius: 100%;
+        border: 1px solid white;
+        cursor: context-menu;
+
+        sub {
+          font-size: smaller;
+        }
+        p {
+          font-size: smaller;
+        }
+      }
+    }
+  }
+
+  // -------- right
+
+  .planet__desc-right {
+    position: absolute;
+    top: 150;
+    right: -550;
+    color: white;
+    font-size: 3rem;
+    padding: 1.5rem;
+    max-width: 800px;
+
+    @include breakpoint("lg") {
+      right: -200;
+    }
+  }
+
+  .container {
+    border: 1px solid white;
+    border-radius: 0.4em;
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+
+  .subtitle {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12;
+      left: 0;
+      width: 60%;
+      height: 3px;
+      background-color: $color;
+    }
+  }
+
+  .desc {
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+}
