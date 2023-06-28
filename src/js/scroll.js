@@ -28,9 +28,11 @@ import { Planet } from "./planet";
     const zMove = (window.scrollY / maxScrollValue) * 2000 - 490;
     stageEl.style.transform = `translateZ(${zMove}vw)`;
 
-    // // 프로그래스바
-    // const scrollPer = window.scrollY / maxScrollValue;
-    // progressEl.style.width = `${scrollPer * 100}%`;
+    // 프로그래스바
+    const scrollPer = window.scrollY / maxScrollValue;
+    progressEl.style.width = `${scrollPer * 100}%`;
+
+    console.log(progressEl, scrollPer);
 
     // 행성 애니메이션
 
