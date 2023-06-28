@@ -3,6 +3,9 @@
 import { Planet } from "./planet";
 
 {
+  const sun = new Planet("sun");
+  const mercury = new Planet("mercury");
+
   const stageEl = document.querySelector(".world .stage");
   const progressEl = document.querySelector(".progress-bar");
 
@@ -21,7 +24,8 @@ import { Planet } from "./planet";
     // const scrollPer = window.scrollY / maxScrollValue;
     // progressEl.style.width = `${scrollPer * 100}%`;
 
-    // 행성 텍스트 애니메이션
+    console.log(zMove);
+    // 행성 애니메이션
   });
 
   // function
@@ -29,9 +33,7 @@ import { Planet } from "./planet";
     maxScrollValue = document.body.offsetHeight - window.innerHeight;
   }
 
-  function init() {
-    new Planet("sun");
-  }
+  function init() {}
 
   // init
   init();

@@ -13,10 +13,9 @@ export class Planet {
       `.${name} .planet__desc-bottom-left`
     );
     this.rightEl = document.querySelector(`.${name} .planet__desc-right`);
-    this.makeAnime();
   }
 
-  async makeAnime() {
+  makeAnime() {
     this.leftEl.classList.remove("hidden");
     this.leftBottomEl.classList.remove("hidden");
     this.rightEl.classList.remove("hidden");
@@ -35,5 +34,11 @@ export class Planet {
     gsap.from(leftDescEl, { x: -50, opacity: 0, delay: 2 });
     gsap.from(leftBottomDescEl, { x: -50, opacity: 0, delay: 3 });
     gsap.from(rightDescEl, { x: -50, opacity: 0, delay: 3 });
+  }
+
+  hideAnime() {
+    this.leftEl.classList.add("hidden");
+    this.leftBottomEl.classList.add("hidden");
+    this.rightEl.classList.add("hidden");
   }
 }

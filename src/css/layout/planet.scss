@@ -26,6 +26,7 @@
 }
 .mercury {
   transform: translateZ(-10vw);
+  @include getPlanetDesc("mercury");
   @include planetization("mercury");
 }
 
