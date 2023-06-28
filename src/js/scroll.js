@@ -5,6 +5,8 @@ import { Planet } from "./planet";
 {
   const sun = new Planet("sun");
   const mercury = new Planet("mercury");
+  const venus = new Planet("venus");
+  const earth = new Planet("earth");
 
   const stageEl = document.querySelector(".world .stage");
   const progressEl = document.querySelector(".progress-bar");
@@ -25,15 +27,27 @@ import { Planet } from "./planet";
     // progressEl.style.width = `${scrollPer * 100}%`;
 
     // 행성 애니메이션
-    console.log(zMove);
-    if (zMove > -390 && sun.flag) {
+
+    const scrollPoint = (window.scrollY / maxScrollValue) * 100;
+    console.log(scrollPoint);
+    if (scrollPoint > 10 && sun.flag) {
       sun.makeAnime();
       sun.setFlag();
     }
 
-    if (zMove > -76 && mercury.flag) {
+    if (scrollPoint > 35 && mercury.flag) {
       mercury.makeAnime();
       mercury.setFlag();
+    }
+
+    if (scrollPoint > 70 && venus.flag) {
+      venus.makeAnime();
+      venus.setFlag();
+    }
+
+    if (scrollPoint > 90 && earth.flag) {
+      earth.makeAnime();
+      earth.setFlag();
     }
   });
 
